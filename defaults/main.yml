@@ -1,0 +1,26 @@
+---
+# start the ntpd service and enable it at system boot
+ntp_enabled: true
+
+# Set the timezone for your server
+ntp_timezone: "America/New_York"
+
+# Set to true to allow this role to manage the NTP configuration file (`/etc/ntp.conf`)
+ntp_manage_config: false
+
+# NTP server area configuration (leave empty for 'Worldwide').
+# See: http://support.ntp.org/bin/view/Servers/NTPPoolServers
+ntp_area: ''
+
+# Specify the NTP servers you'd like to use
+# Only takes effect if you allow this role to manage NTP's configuration, by setting `ntp_manage_config` to `true`
+ntp_servers:
+  - "0{{ ntp_area }}.pool.ntp.org iburst"
+  - "1{{ ntp_area }}.pool.ntp.org iburst"
+  - "2{{ ntp_area }}.pool.ntp.org iburst"
+  - "3{{ ntp_area }}.pool.ntp.org iburst"
+
+# Restrict NTP access to these hosts; loopback only, by default
+ntp_restrict:
+  - "127.0.0.1"
+  - "::1"

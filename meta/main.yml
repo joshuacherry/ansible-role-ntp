@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Joshua Cherry
+  description: Ansible playbook to install and configure ntp.
+  license: MIT
+  min_ansible_version: 2.4
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+    - name: EL
+      versions:
+        - 7
+  galaxy_tags:
+    - system
+dependencies: []
