@@ -16,4 +16,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-[Unreleased]: https://github.com/joshuacherry/ansible-role-ntp/compare/1.0.0...HEAD
+## [1.0.1] - 2019-02-08
+
+### Changed
+
+- Vagrant and ansible now use python3 for tests
+
+[Unreleased]: https://github.com/joshuacherry/ansible-role-ntp/compare/1.0.1...HEAD
+[1.0.1]: https://github.com/joshuacherry/ansible-role-ntp/compare/1.0.0...1.0.1
